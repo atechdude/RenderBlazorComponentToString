@@ -24,6 +24,8 @@ Limitations:
 
 Will not work with any components that use JSInterop.
 
+I have also not tested any of this on WebAssembly. Please let me know if it works.
+
 
 Big thanks to Andrew Lock and his Blog Post : https://andrewlock.net/exploring-the-dotnet-8-preview-rendering-blazor-components-to-a-string/
 
