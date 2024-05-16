@@ -71,7 +71,7 @@ public class Program
 ```
 ### In a class
 
-
+```csharp
 public class SomeClass
 {
     private readonly IArcBlazorComponentRenderer _arcBlazorComponentRenderer;
@@ -81,6 +81,7 @@ public class SomeClass
         _arcBlazorComponentRenderer = arcBlazorComponentRenderer;
     }
 }
+```
 
 In a Page Component
 
