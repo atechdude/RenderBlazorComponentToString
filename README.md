@@ -15,7 +15,7 @@ This utility is ideal for organizations and developers looking to enhance their 
 
 
 Limitations:
-Most liekly will not work with any components that use JSInterop.
+Will not work with any components that use JSInterop.
 
 
 Big thanks to Andrew Lock and his Blog Post : https://andrewlock.net/exploring-the-dotnet-8-preview-rendering-blazor-components-to-a-string/
