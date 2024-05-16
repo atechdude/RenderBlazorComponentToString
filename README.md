@@ -113,7 +113,7 @@ In a Page Component
         // Assuming you have an EmailModel class and EmailTemplateComponent component
         var emailModel = new EmailModel()
             {
-                From = "jimmy@hendrixisgod.com",
+                From = "jimi@hendrixisgod.com",
                 To = "thepope@thepope.com",
                 Subject = "Jimi Hendrix is God",
                 PlainTextBody = "Jimi Hendrix is God",
