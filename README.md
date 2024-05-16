@@ -23,6 +23,8 @@ Big thanks to Andrew Lock and his Blog Post : https://andrewlock.net/exploring-t
 
 ### Basic Usage
 
+
+I use Serilog, Doesn't everyone these days? If you don't have Serilog setup then please do so. You are going to need an ILogger and an ILoggerFactory.
 Program.cs Configuration
 
 ```csharp
