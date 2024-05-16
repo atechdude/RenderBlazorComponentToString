@@ -82,4 +82,73 @@ public class SomeClass
     }
 }
 
+In a Page Component
+
+```csharp
+@page "/"
+@layout MainLayout
+@inject IArcBlazorComponentRenderer ArcBlazorComponentRenderer
+
+ <div><button @onclick="RenderComponentToString">Render Component To String</button></div>
+ <div>
+     @RenderedComponentValue
+ </div>
+
+@code
+{
+    private MarkupString RenderedComponentValue { get; set; } = new MarkupString();
+
+    private async Task RenderComponentToString()
+    {
+
+        if (ArcBlazorComponentRenderer is null)
+        {
+
+            return;
+        }
+        
+        // Assuming you have an EmailModel class and EmailTemplateComponent component
+        var emailModel = new EmailModel()
+            {
+                From = "jimmy@hendrixisgod.com",
+                To = "thepope@thepope.com",
+                Subject = "Jimi Hendrix is God",
+                PlainTextBody = "Jimi Hendrix is God",
+                HtmlBody = "<h1>Jimi Hendrix is God</h1>",
+                SomeOtherNestedStuff = new SomeOtherNestedStuff()
+                {
+                    // Create a list of integers
+                    SomeIntegers = [1, 2, 3, 4, 5],
+
+                    // Create a list of strings
+                    SomeStrings = ["one", "two", "three", "four", "five"],
+
+
+                }
+            };
+
+
+        var cts = new CancellationTokenSource();
+
+        var ct = cts.Token;
+
+        //var renderComponentToStringResults = await BlazorComponentToStringRenderer.RenderComponentToString<EmailModel, EmailTemplateComponent>(emailModel, ct);
+
+        var renderComponentToStringResults = await ArcBlazorComponentRenderer.RenderComponentToString<EmailModel, EmailTemplateComponent>(emailModel, ct);
+
+        if (!renderComponentToStringResults.IsSuccess)
+        {
+            var exception = renderComponentToStringResults.HandleError(error => error);
+
+            return;
+        }
+
+        RenderedComponentValue = new MarkupString(renderComponentToStringResults.HandleSuccess(success => success) ?? string.Empty);
+
+    }
+}
+
+```
+
+
 
