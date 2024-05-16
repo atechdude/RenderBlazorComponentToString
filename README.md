@@ -72,7 +72,7 @@ public class Program
     }
 }
 ```
-### In a class
+### In a Class
 
 ```csharp
 public class SomeClass
