@@ -71,7 +71,7 @@ public class Program
 ```
 ```csharp
 
-### Injecting the IArcBlazorComponentRenderer
+## Injecting the IArcBlazorComponentRenderer
 
 public class SomeClass
 {
