@@ -15,8 +15,10 @@ This utility is ideal for organizations and developers looking to enhance their 
 
 
 I created a very small NuGet Package for this.
-dotnet add package BlazorComponentToString --version 1.0.0
 
+```csharp
+dotnet add package BlazorComponentToString --version 1.0.0
+```
 
 Limitations:
 
