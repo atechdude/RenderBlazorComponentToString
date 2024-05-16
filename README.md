@@ -69,10 +69,9 @@ public class Program
     }
 }
 ```
+### In a class
+
 ```csharp
-
-##Injecting the IArcBlazorComponentRenderer
-
 public class SomeClass
 {
     private readonly IArcBlazorComponentRenderer _arcBlazorComponentRenderer;
@@ -82,5 +81,5 @@ public class SomeClass
         _arcBlazorComponentRenderer = arcBlazorComponentRenderer;
     }
 }
-```
+
 
