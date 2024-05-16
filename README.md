@@ -24,7 +24,7 @@ Big thanks to Andrew Lock and his Blog Post : https://andrewlock.net/exploring-t
 ### Basic Usage
 
 
-### You are going to need an ILogger and ILoggerFactory as well as the language-ext package. https://github.com/louthy/language-ext
+### You are going to need an ILogger and an ILoggerFactory as well as the language-ext package. https://github.com/louthy/language-ext
 
 I use Serilog for logging, however you should be able to use whatever you like. You have the source to everything so feel free to do whatever you want.
 
