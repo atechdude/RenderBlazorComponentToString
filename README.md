@@ -20,3 +20,51 @@ Most liekly will not work with any components that use JSInterop.
 
 Big thanks to Andrew Lock and his Blog Post : https://andrewlock.net/exploring-the-dotnet-8-preview-rendering-blazor-components-to-a-string/
 
+
+### Basic Usage
+
+Program.cs Configuration
+
+```csharp
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        var builder = WebApplication.CreateBuilder(args);
+
+        // Add services to the container.
+        builder.Services.AddRazorComponents()
+            .AddInteractiveServerComponents();
+
+        builder.Services.AddBlazorComponentToStringRenderer();
+
+        builder.Services.AddSerilog((services, loggerConfiguration) => loggerConfiguration
+            .ReadFrom.Configuration(builder.Configuration)
+            .Enrich.FromLogContext());
+            
+        
+
+        var app = builder.Build();
+
+        // Configure the HTTP request pipeline.
+        if (!app.Environment.IsDevelopment())
+        {
+            app.UseExceptionHandler("/Error");
+            // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+            app.UseHsts();
+        }
+
+        app.UseHttpsRedirection();
+
+        app.UseStaticFiles();
+        app.UseAntiforgery();
+
+        app.MapRazorComponents<App>()
+            .AddInteractiveServerRenderMode();
+        
+        app.Run();
+    }
+}
+```
+
+
