@@ -28,7 +28,7 @@ I use Serilog, Doesn't everyone these days? If you don't have Serilog setup then
 
 Program.cs Configuration
 
-
+```csharp
 public class Program
 {
     public static void Main(string[] args)
