@@ -132,8 +132,6 @@ In a Page Component
 
         var ct = cts.Token;
 
-        //var renderComponentToStringResults = await BlazorComponentToStringRenderer.RenderComponentToString<EmailModel, EmailTemplateComponent>(emailModel, ct);
-
         var renderComponentToStringResults = await ArcBlazorComponentRenderer.RenderComponentToString<EmailModel, EmailTemplateComponent>(emailModel, ct);
 
         if (!renderComponentToStringResults.IsSuccess)
