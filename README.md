@@ -70,6 +70,9 @@ public class Program
 }
 ```
 ```csharp
+
+### Injecting the IArcBlazorComponentRenderer
+
 public class SomeClass
 {
     private readonly IArcBlazorComponentRenderer _arcBlazorComponentRenderer;
