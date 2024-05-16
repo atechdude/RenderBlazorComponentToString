@@ -69,5 +69,15 @@ public class Program
     }
 }
 ```
+```csharp
+public class SomeClass
+{
+    private readonly IArcBlazorComponentRenderer _arcBlazorComponentRenderer;
 
+    public SomeClass(IArcBlazorComponentRenderer arcBlazorComponentRenderer)
+    {
+        _arcBlazorComponentRenderer = arcBlazorComponentRenderer;
+    }
+}
+```
 
