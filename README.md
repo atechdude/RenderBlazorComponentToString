@@ -14,6 +14,10 @@ Developer Friendly: Designed with a focus on ease of use, with comprehensive doc
 This utility is ideal for organizations and developers looking to enhance their .NET applications with high-quality, programmatically generated HTML content derived from Blazor components.
 
 
+I created a very small NuGet Package for this.
+dotnet add package BlazorComponentToString --version 1.0.0
+
+
 Limitations:
 
 Will not work with any components that use JSInterop.
